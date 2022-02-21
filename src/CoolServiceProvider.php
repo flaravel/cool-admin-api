@@ -3,6 +3,7 @@
 namespace Cool;
 
 use Cool\Models\AdminUser;
+use Cool\Commands\CoolInstall;
 use Cool\Traits\ResponseTrait as CoolResponseTrait;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\ValidationException;
@@ -34,10 +35,10 @@ class CoolServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/config.php' => config_path('cool.php')
             ], 'cool-admin');
+
         } else {
             $this->defineCoolAdminException();
         }
-
         $this->defineCoolAdminRoutes();
         $this->defineCoolAdminConfigureGuard();
     }

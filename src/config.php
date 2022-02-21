@@ -4,6 +4,6 @@ return [
 
     'route' => [
 
-        'prefix' =>  'cool'
+        'prefix' =>  'admin'
     ]
 ];

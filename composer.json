@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php-open-source-saver/jwt-auth": "^1.4",
         "illuminate/container": "^6.0 || ^7.0 || ^8.0 || ^9.0"
     },
     "autoload": {
