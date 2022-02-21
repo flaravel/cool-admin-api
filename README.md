@@ -1,6 +1,8 @@
 
 当第一眼看到 [Cool-Admin](https://github.com/cool-team-official/cool-admin-vue) 就被它的颜值惊艳到了
 
+![image.png](https://cdn.learnku.com/uploads/images/202202/22/30430/U1ZpcEn2NW.png!large)
+
 官方只有node和java版本的server api，于是基于Laravel做了权限管理模块
 
 ### 安装
