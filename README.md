@@ -46,4 +46,18 @@ const proxy = {
 
 更改完运行就能看到如下界面:
 
-![img_1.png](https://camo.githubusercontent.com/8da14571f9e7169a6a542113f0b410c1662f44a9ab1c74bbfa6d2b9604932307/68747470733a2f2f636f6f6c2d73686f772e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f61646d696e2f686f6d652d6d696e692e706e67)
+![img_1.png](http://119.29.159.240:8002/storage/20220221/ii7OtWO9VuS3sGSKjFGElgRsoiDQ5XZGsgLxB3d2.png)
+
+
+### 演示地址
+
+http://119.29.159.240:8001
+
+管理员:
+
+- admin
+- password
+
+测试:
+- test
+- password
