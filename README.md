@@ -46,7 +46,7 @@ const proxy = {
 
 更改完运行就能看到如下界面:
 
-![img_1.png](http://119.29.159.240:8002/storage/20220221/ii7OtWO9VuS3sGSKjFGElgRsoiDQ5XZGsgLxB3d2.png)
+![img_1.png](http://wxlib-dev.oss-cn-shanghai.aliyuncs.com/dev/ly6SzTx7EUUdPB3sBOfKKgnaWjmeV3N9eIf081Ga.png)
 
 
 ### 演示地址
