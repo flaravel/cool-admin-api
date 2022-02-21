@@ -2,7 +2,7 @@
 
 namespace Cool\Controllers;
 
-use Cool\Cool;
+use Cool\Models\AdminUser;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Cool\Resources\UsersResource;
@@ -26,7 +26,7 @@ class UserController extends CoolBaseController
      */
     public function model(): Builder
     {
-        return Cool::user();
+        return AdminUser::query();
     }
 
 

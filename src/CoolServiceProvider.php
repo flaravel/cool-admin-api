@@ -2,6 +2,7 @@
 
 namespace Cool;
 
+use Cool\Models\AdminUser;
 use Cool\Traits\ResponseTrait as CoolResponseTrait;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\ValidationException;
@@ -28,7 +29,7 @@ class CoolServiceProvider extends ServiceProvider
     public function boot()
     {
         if (app()->runningInConsole()) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__ . '/../migrations');
 
             $this->publishes([
                 __DIR__.'/config.php' => config_path('cool.php')
@@ -78,7 +79,7 @@ class CoolServiceProvider extends ServiceProvider
         $providersData = array_merge(config('auth.providers'), [
             'cool_user' => [
                 'driver' => 'eloquent',
-                'model' => config('cool.models.user'),
+                'model' => AdminUser::class,
             ]
         ]);
         config(['auth.guards' => $guardData]);

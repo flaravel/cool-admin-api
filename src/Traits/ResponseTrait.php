@@ -15,7 +15,7 @@ trait ResponseTrait
      *
      * @return JsonResponse
      */
-    public function response(mixed $data, string $message = 'ok', int $code = 0): JsonResponse
+    public function response($data, string $message = 'ok', int $code = 0): JsonResponse
     {
         return Response::json(['code' => $code, 'message' => $message, 'data' => $data])
             ->setEncodingOptions(JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
@@ -37,7 +37,7 @@ trait ResponseTrait
      *
      * @return JsonResponse
      */
-    public function success(mixed $data): JsonResponse
+    public function success($data): JsonResponse
     {
         return $this->response($data);
     }
@@ -48,7 +48,7 @@ trait ResponseTrait
      *
      * @return JsonResponse
      */
-    public function message(string $message = 'ok'): JsonResponse
+    public function message($message = 'ok'): JsonResponse
     {
         return $this->response(NULL, $message);
     }

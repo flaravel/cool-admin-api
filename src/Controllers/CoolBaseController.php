@@ -158,7 +158,7 @@ abstract class CoolBaseController extends Controller implements CurdInterface
      *
      * @return mixed
      */
-    protected function responseWithResource(mixed $data): mixed
+    protected function responseWithResource($data)
     {
         $resource = $this->resource();
 
@@ -185,7 +185,7 @@ abstract class CoolBaseController extends Controller implements CurdInterface
      *
      * @return mixed
      */
-    protected function formatResponseData(mixed $data): mixed
+    protected function formatResponseData($data)
     {
         if ($data instanceof LengthAwarePaginator) {
             return [

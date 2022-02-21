@@ -1,20 +1,22 @@
 {
     "name": "flaravel/cool-admin-api",
     "description": "基于Laravel的Cool-Admin Server Api",
-    "autoload": {
-        "psr-4": {
-            "Cool\\": "src/"
-        }
-    },
-    "require": {
-        "php": "^8.0.2"
-    },
+    "keywords": ["cool-admin","laravel", "sdk"],
+    "license": "MIT",
     "authors": [
         {
             "name": "flaravel",
             "email": "flaravel7@gamil.com"
         }
     ],
+    "require": {
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0 || ^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cool\\": "src/"
+        }
+    },
     "laravel": {
         "providers": [
             "Cool\\CoolServiceProvider"
