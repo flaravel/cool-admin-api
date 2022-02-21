@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('label')->comment('角色标签')->default('');
             $table->unsignedTinyInteger('relevance')->comment('数据权限是否关联上下级')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
