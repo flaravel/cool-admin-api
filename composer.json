@@ -18,9 +18,11 @@
             "Cool\\": "src/"
         }
     },
-    "laravel": {
-        "providers": [
-            "Cool\\CoolServiceProvider"
-        ]
+    "extra":{
+        "laravel": {
+            "providers": [
+                "Cool\\CoolServiceProvider"
+            ]
+        }
     }
 }

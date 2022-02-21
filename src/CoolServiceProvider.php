@@ -35,6 +35,9 @@ class CoolServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/config.php' => config_path('cool.php')
             ], 'cool-admin');
+            $this->publishes([
+                __DIR__ . '/CoolAdminSeeder.php' => database_path('seeders/CoolAdminSeeder.php')
+            ], 'cool-seeder');
 
         } else {
             $this->defineCoolAdminException();
