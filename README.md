@@ -19,6 +19,9 @@
 
 `php artisan db:seed --class=CoolAdminSeeder`
 
+### 生成jwt密钥
+`php artisan jwt:secret`
+
 ### 前端
 
 github: https://github.com/flaravel/cool-admin-vue
