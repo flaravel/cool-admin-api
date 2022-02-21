@@ -86,7 +86,7 @@ class AdminRole extends Model
     /**
      * @return Builder[]|Collection
      */
-    public function getMenus(): Collection|array
+    public function getMenus()
     {
         $menuIds = $this->roleMenus()->get(['menu_id'])->pluck('menu_id')->toArray();
 
