@@ -4,9 +4,14 @@ namespace Database\Seeders;
 
 use Cool\Models\AdminUser;
 use Cool\Models\AdminRole;
+use Cool\Models\AdminMenu;
+use Cool\Models\AdminUserRole;
+use Cool\Models\AdminRoleMenu;
 use Illuminate\Database\Seeder;
+use Cool\Models\AdminDepartment;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Cool\Models\AdminRoleDepartment;
 
 class CoolAdminSeeder extends Seeder
 {
@@ -17,6 +22,14 @@ class CoolAdminSeeder extends Seeder
      */
     public function run()
     {
+        AdminUser::query()->truncate();
+        AdminRole::query()->truncate();
+        AdminUserRole::query()->truncate();
+        AdminMenu::query()->truncate();
+        AdminRoleMenu::query()->truncate();
+        AdminDepartment::query()->truncate();
+        AdminRoleDepartment::query()->truncate();
+
         $user = AdminUser::query()->create([
             'department_id' => 1,
             'name' => 'admin',
@@ -80,7 +93,7 @@ class CoolAdminSeeder extends Seeder
 ('122', NULL, 'demo', '', '', '0', 'icon-like', '3', '', '1', '1', '2022-02-20 17:29:46', '2022-02-20 17:31:59', '2022-02-20 17:31:59'),
 ('123', '122', '测试菜单', '/demo/test', '', '1', 'icon-info', '1', 'views/home/index.vue', '0', '1', '2022-02-20 17:30:24', '2022-02-20 17:31:55', '2022-02-20 17:31:55');";
 
-        DB::raw($sql);
+        DB::getPdo()->exec($sql);
 
 
         $sql2 = "INSERT INTO `admin_role_menus` (`id`, `menu_id`, `role_id`, `created_at`, `updated_at`) VALUES
@@ -113,13 +126,13 @@ class CoolAdminSeeder extends Seeder
 ('127', '25', '1', '2022-02-21 15:06:45', '2022-02-21 15:06:45'),
 ('128', '26', '1', '2022-02-21 15:06:45', '2022-02-21 15:06:45');";
 
-        DB::raw($sql2);
+        DB::getPdo()->exec($sql2);
 
         $sql3 = "INSERT INTO `admin_departments` (`id`, `parent_id`, `name`, `order_num`, `created_at`, `updated_at`) VALUES
 ('1', '0', 'COOL', '0', '2022-02-21 03:59:52', '2022-02-21 15:33:25'),
 ('17', '1', '测试', '1', '2022-02-21 14:50:23', '2022-02-21 15:33:25');";
 
-        DB::raw($sql3);
+        DB::getPdo()->exec($sql3);
 
 
         $sql4 = "INSERT INTO `admin_role_departments` (`id`, `department_id`, `role_id`, `created_at`, `updated_at`) VALUES
@@ -130,6 +143,6 @@ class CoolAdminSeeder extends Seeder
 ('13', '1', '1', '2022-02-21 15:06:45', '2022-02-21 15:06:45'),
 ('14', '17', '1', '2022-02-21 15:06:45', '2022-02-21 15:06:45');";
 
-        DB::raw($sql4);
+        DB::getPdo()->exec($sql4);
     }
 }
