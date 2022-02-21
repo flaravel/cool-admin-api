@@ -14,6 +14,11 @@
 ### 迁移
 `php artisan migrate`
 
+### 初始化数据
+`php artisan vendor:publish --tag=cool-seeder`
+
+`php artisan db:seed --class=CoolAdminSeeder`
+
 ### 前端
 
 github: https://github.com/flaravel/cool-admin-vue
