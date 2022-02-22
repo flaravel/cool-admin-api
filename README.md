@@ -7,7 +7,7 @@
 
 ### 安装
 
-`compose require flaravel/cool-admin-api`
+`composer require flaravel/cool-admin-api`
 
 ### 配置文件
 
