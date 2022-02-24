@@ -22,6 +22,25 @@ class UserController extends CoolBaseController
 
 
     /**
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function personUpdate(Request $request): JsonResponse
+    {
+        $validated = $request->only('headImg', 'nickName', 'password');
+        if (isset($validated['password']) && $validated['password']) {
+            $validated['password'] = Hash::make($validated['password']);
+        }
+        $validated['avatar'] = $validated['headImg'];
+        $validated['nick_name'] = $validated['nickName'] ?? '';
+
+        Auth::guard('cool')->user()->update($validated);
+
+        return $this->message('更新成功');
+    }
+
+    /**
      * @return Builder
      */
     public function model(): Builder

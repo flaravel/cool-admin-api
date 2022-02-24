@@ -22,12 +22,14 @@ Route::group(['prefix' => config('cool.route.prefix')], function () {
 
         // 管理员信息
         Route::get('user', [UserController::class, "user"]);
+        Route::post('personUpdate', [UserController::class, "personUpdate"]);
 
         // 权限菜单
         Route::get('permmenu', [MenuController::class, "perms"]);
 
         Route::group(['prefix' => 'system'], function () {
 
+            // 管理员
             Route::get('user/info', [UserController::class, "show"]);
             Route::post('user/page', [UserController::class, "page"]);
             Route::post('user/delete', [UserController::class, "delete"]);
